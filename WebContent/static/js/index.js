@@ -1,12 +1,18 @@
-var columnCount=0;
+var columnCount = 0;
 
-$(document).ready(function() {
-	$('#addColumnButton').click(function() {
-		$("#contentColumnDiv").append("<div class='contentColumn'>1</div>");
-    });
-	
-});
+$(document).ready(
+		function() {
 
-var getColumnCount= function(){
+			$('#addColumnButton').click(
+					function() {
+						var selectValue = $('#columnSelect :selected').val();
+						var div = document.createElement('div');
+						$(div).addClass("contentColumn").html(selectValue)
+								.appendTo($("#contentColumnDiv"));
+					});
+
+		});
+
+var getColumnCount = function() {
 	return columnCount++;
 };
