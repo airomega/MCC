@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+
+#header {
+	width: 100%;
+	background-color: red;
+}
+
+#main {
+	background-color: black;
+}
+
+#topNav {
+	width: 100%;
+	clear:both;
+	background-color: yellow;
+}
