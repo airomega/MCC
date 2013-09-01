@@ -1,6 +1,7 @@
 var columnCount = 0;
 
 $(document).ready(
+		
 		function() {
 
 			$('#addColumnButton').click(
@@ -14,13 +15,10 @@ $(document).ready(
 			$('#schemeButton').click(function() {
 				var selectValue = $('#schemeSelect :selected').val();
 				if (selectValue == 'blue') {
-					window.alert("blue");
 					updateStyleSheet('blue');
 				} else if (selectValue == 'yellow') {
-					window.alert("yellow");
 					updateStyleSheet('yellow');
 				} else {
-					window.alert("purple");
 					updateStyleSheet('purple');
 				}
 			});

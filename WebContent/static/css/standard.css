@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+/* divs */
+#headerDiv {width: 95%;}
+#columnNavDiv {width: 100%; clear: both;}
+#mainDiv {width: 95%; height: 95%;}
+#contentColumnDiv {width: 95%; height: 95%; margin: 0 auto; }
+
+/* columns*/
+.contentColumn {width: 75px; height: 100%;  border-style: ridge; margin: 5px 5px 5px 5px; float: left;}
+
+/* widgets*/
+#columnSelect {}
+#addColumnButton {}
+#schemeSelect {float:right;}
+#schemeButton {float:right;}
+
+/*video*/
+#backgroundVideo { width: 100%; height: 100%; position: absolute;top: 0; margin: 0; z-index: -1; }
