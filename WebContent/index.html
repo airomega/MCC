@@ -2,32 +2,36 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel='stylesheet' type='text/css'
-	href='/StevesPlace/static/css/StevesPlace.css' />
 <script type='text/javascript'
 	src='/StevesPlace/static/js/jquery-2.0.3.min.js'></script>
 <script type='text/javascript' src='/StevesPlace/static/js/index.js'></script>
+<link id="dynamic_css" rel="stylesheet" type="text/css"
+	href="/StevesPlace/static/css/purple.css"/>
+<link rel='stylesheet' type='text/css'
+	href='/StevesPlace/static/css/standard.css' />
 <title>Title Page</title>
 </head>
 <body>
-	<div id="header">
+	<div id="headerDiv">
 		<h1>Default title page</h1>
 	</div>
-	<div id="main">
-	<p>Main Div</p>
-		<div id="columnNav">
-			<p>Column Nav</p>
-			<button type="button" id="addColumnButton">Add</button>
-			<select id="columnSelect">
-				<option value="blue">Blue</option>
-				<option value="green">Green</option>
-				<option value="red">Red</option>
-			</select>
-		</div>
-		<div id="contentColumnDiv">
-			<p>contentColumnDiv</p>
-			<div id="contentColumn" class="contentColumn"></div>
-		</div>
+	<div id="columnNavDiv">
+		<select id="columnSelect">
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="red">Red</option>
+		</select>
+		<button type="button" id="addColumnButton">Add</button>
+		<select id="schemeSelect">
+			<option value="purple">Purple</option>
+			<option value="blue">Blue</option>
+			<option value="yellow">Yellow</option>
+		</select>
+		<button type="button" id="schemeButton">Select</button>
+	</div>
+	<div id="mainDiv" class="primary">
+		<p>Main Div</p>
+		<div id="contentColumnDiv" class="secondary"></div>
 	</div>
 </body>
 </html>
