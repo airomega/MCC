@@ -1,45 +1,50 @@
-var columnCount = 0;
+$(document).ready(function(){
 
-$(document).ready(
+	$('.S-text').click(function(){
 		
-		function() {
+		
+		var selectedColour = randomColour();
+		var selectedFontSize = randomFontSize();
+		var selectedFontType = randomFontType();		
+		$(this).css({'color':selectedColour,'font-size':selectedFontSize,'font-family':selectedFontType});
+	});
+	
+	
+	$('T-text').click();
+	$('E1-text').click();
+	$('V-text').click();
+	$('E-text').click();
+	$('M-text').click();
+	$('c-text').click();
+	$('C-text').click();
+	$('U-text').click();
+	$('L1-text').click();
+	$('L2-text').click();
+	$('O-text').click();
+	$('U-text').click();
+	$('G-text').click();
+	$('H-text').click();
 
-			$('#addColumnButton').click(
-					function() {
-						var selectValue = $('#columnSelect :selected').val();
-						var div = document.createElement('div');
-						$(div).addClass("contentColumn tertiary").html(
-								selectValue).appendTo($("#contentColumnDiv"));
-					});
 
-			$('#schemeButton').click(function() {
-				var selectValue = $('#schemeSelect :selected').val();
-				if (selectValue == 'blue') {
-					updateStyleSheet('blue');
-				} else if (selectValue == 'yellow') {
-					updateStyleSheet('yellow');
-				} else {
-					updateStyleSheet('purple');
-				}
-			});
-
-			function updateStyleSheet(filename) {
-
-				newstylesheet = "/StevesPlace/static/css/" + filename + ".css";
-
-				if ($("#dynamic_css").length == 0) {
-					$("head").append("<link>");
-					css = $("head").children(":last");
-					css.attr({
-						id : "dynamic_css",
-						rel : "stylesheet",
-						type : "text/css",
-						href : newstylesheet
-					});
-
-				} else {
-					$("#dynamic_css").attr("href", newstylesheet);
-				}
-
-			}
-		});
+	
+	function randomColour(){
+		colours = [ '#F80012', '#FF6C00','#009E8E','#1DD300','#FC717B','#A2000C','#FF9140','#A64600','#5DCFC3','#00675C','#52E93A','#138900'];
+		return colours[randomInt(colours.length)];
+	}
+	
+	function randomFontSize(){
+		fontSize = [ 'xx-small', 'x-small','small','medium','large','x-large','xx-large'];
+		return fontSize[randomInt(fontSize.length)];
+	}
+	
+	function randomFontType(){
+		fontType = [ 'Times New Roman','Georgia','Serif','Calibri','cursive','monospace','sans-serif','Verdana'];
+		return fontType[randomInt(fontType.length)];
+	}
+	
+	function randomInt(base){		
+		var random= Math.floor(Math.random()*base);
+		return random;
+	}
+	
+});
