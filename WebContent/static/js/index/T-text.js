@@ -61,7 +61,7 @@ $(document).ready(function() {
 					'color' : last
 				});
 			});
-		}, 4001);
+		}, 2001);
 
 		if (next === '#FFFFFF') {
 			last = '#FFFFFF';
