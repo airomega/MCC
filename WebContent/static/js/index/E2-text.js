@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 		});
 
-		setInterval(function() {
+		setTimeout(function() {
 			$(letterDivs).each(function() {
 				current = $(this);
 
@@ -40,17 +40,13 @@ $(document).ready(function() {
 	}
 
 	function getRandomTop() {
-		verticalDirection = Math.floor(Math.random() * 100) + 50;
+		verticalDirection = Math.floor(Math.random() * 10) + 50;
 		return '' + getPlusMinus() + verticalDirection + '%';
 	}
 
 	function getRandomLeft() {
-		horizontalDirection = Math.floor(Math.random() * 100) + 50;
+		horizontalDirection = Math.floor(Math.random() * 10) + 50;
 		return '' + getPlusMinus() + horizontalDirection + '%';
-	}
-
-	function randomInt(base) {
-		return Math.floor(Math.random() * base);
 	}
 
 });
