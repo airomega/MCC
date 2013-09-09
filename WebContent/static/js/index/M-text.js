@@ -1,3 +1,6 @@
+var isRunning = false;
+var refreshIntervalId;
+
 $(document).ready(
 		function() {
 
@@ -5,27 +8,27 @@ $(document).ready(
 
 				letterDivs = $('.letter-div');
 
-				refreshIntervalId=setInterval(function() {
-					$(letterDivs).each(function() {
-						current = $(this);
-						selectedColour = randomColour();
-						$(current).css({
-							'background-color' : selectedColour
-						});
-					});
-				}, 1000);
-				
-				setTimeout(function() {
+				if (isRunning) {
 					clearInterval(refreshIntervalId);
 					$(letterDivs).each(function() {
 						current = $(this);
-						selectedColour = randomColour();
 						$(current).css({
 							'background-color' : '#FFFFFF'
 						});
 					});
-				}, 5000);
-
+					isRunning=false;
+				} else {
+					refreshIntervalId = setInterval(function() {
+						$(letterDivs).each(function() {
+							current = $(this);
+							selectedColour = randomColour();
+							$(current).css({
+								'background-color' : selectedColour
+							});
+						});
+					}, 1000);
+					isRunning=true;
+				}
 			});
 
 			function randomColour() {
