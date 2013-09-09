@@ -27,8 +27,7 @@ $(document).ready(function() {
 	}
 
 	function randomInt(base) {
-		var random = Math.floor(Math.random() * base);
-		return random;
+		return Math.floor(Math.random() * base);
 	}
 
 });
