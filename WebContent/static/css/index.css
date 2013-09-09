@@ -4,6 +4,7 @@ html,button,input,select,textarea { font-family: sans-serif; }
 .center_block {position: absolute;height: 99%; width:99%; left: 0%;top: 0%;}
 .name-letter { float:left;width: 3%; text-align: center; font-size: 22px; font-family: sans-serif; color: #000000;}
 .letter-div { position: absolute;top:35%;width:23px;z-index: 1;}
+.img-div {position:absolute; top:130%;left:46%;}
 .S-letter-div{left:22%;}
 .T-letter-div{left:26%;}
 .E1-letter-div{left:30%;}
