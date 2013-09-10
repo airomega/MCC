@@ -6,7 +6,7 @@ html,button,input,select,textarea { font-family: sans-serif; }
 .centre-vid{position:absolute;left:21%; hidden:true;}
 .letter-div { position: absolute;top:35%;width:23px;z-index: 10;}
 .rabbit-div {position:absolute; top:130%;left:46%;background-color : transparent;}
-.sign-div {position:absolute; top:110%;left:60%;background-color : transparent;}
+.sign-div {position:absolute; top:110%;left:40%;background-color : transparent;}
 .lower-div {width:100%; position:absolute; top:100%; left:0}
 .small-image{height:50%;width:50%;z-index: 1;}
 .backgroundVideo{ width:75%,height:75%;z-index: -1;}

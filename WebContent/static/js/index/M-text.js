@@ -22,9 +22,8 @@ $(document).ready(
 					clearInterval(refreshIntervalId);
 					$(letterDivs).each(function() {
 						current = $(this);
-						var bgcol = $('.center_block').css('backgroundColor');
 						$(current).css({
-							'background-color' : bgcol
+							'background-color' : 'transparent'
 						});
 					});
 				}, 1200);
