@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 		$(letterDivs).each(function() {
 			current = $(this);
-			$(current).data('position', $(current).position());
 			randTop = getRandomTop();
 			randLeft = getRandomLeft();
 			$(current).animate({
@@ -20,7 +19,7 @@ $(document).ready(function() {
 			$(letterDivs).each(function() {
 				current = $(this);
 
-				var position = $(current).data('position');
+				var position = $(current).data('original-position');
 				$(current).animate({
 					top : position.top,
 					left : position.left

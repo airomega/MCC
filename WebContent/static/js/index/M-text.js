@@ -26,9 +26,21 @@ $(document).ready(
 								'background-color' : selectedColour
 							});
 						});
-					}, 1000);
+					}, 200);
 					isRunning=true;
 				}
+				
+				setTimeout(function(){
+					clearInterval(refreshIntervalId);
+					$(letterDivs).each(function() {
+						current = $(this);
+						$(current).css({
+							'background-color' : '#FFFFFF'
+						});
+					});
+				},1200);
+				
+				
 			});
 
 			function randomColour() {

@@ -76,7 +76,7 @@ $(document).ready(function() {
 				currentElem = $(this);
 				$(currentElem).animate({
 					opacity : 1,
-				}, 8000);
+				}, 5000);
 			});
 		}, 6000);
 		

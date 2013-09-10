@@ -1,13 +1,18 @@
 $(document).ready(function() {
 
 	$('.H-text').click(function() {
-
 		divs = $('div');
 		$(divs).each(function() {
 			currentElem = $(this);
 			setDivNormal();
 		});
-		
+
+		letterDivs = $('.letter-div');
+		$(letterDivs).each(function() {
+			currentElem = $(this);
+			setLetterDivNormal();
+		});
+
 		spans = $('.name-letter');
 		$(spans).each(function() {
 			currentElem = $(this);
@@ -15,27 +20,35 @@ $(document).ready(function() {
 		});
 
 	});
-	
-	function setDivNormal(){
-		$(currentElem).css({
-			'background-color' : '#FFFFFF'
-		});
-	}
-
-	function setTextNormal() {
-		selectedColour = '#000000';
-		selectedFontSize = '22px';
-		selectedFontType = 'sans-serif';
-		$(currentElem).css({
-			'font-family' : selectedFontType
-		});
-
-		$(currentElem).animate({
-			'font-size' : selectedFontSize,
-		}, Math.floor(Math.random() * (5)) * 1000);
-		$(currentElem).css({
-			'color' : selectedColour
-		});
-	}
 
 });
+
+function setDivNormal() {
+	$(currentElem).css({
+		'background-color' : '#FFFFFF'
+	});
+}
+
+function setLetterDivNormal() {
+	var position = $(currentElem).data('original-position');
+	$(currentElem).animate({
+		top : position.top,
+		left : position.left
+	});
+}
+
+function setTextNormal() {
+	selectedColour = '#000000';
+	selectedFontSize = '22px';
+	selectedFontType = 'sans-serif';
+	$(currentElem).css({
+		'font-family' : selectedFontType
+	});
+
+	$(currentElem).animate({
+		'font-size' : selectedFontSize,
+	}, 700);
+	$(currentElem).css({
+		'color' : selectedColour
+	});
+}
