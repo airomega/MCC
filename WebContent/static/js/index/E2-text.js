@@ -12,14 +12,14 @@ $(document).ready(function() {
 				top : randTop,
 				left : randLeft
 			}, 1500);
-
+			$(current).data('latest-position', $(current).position());
 		});
 
 		setTimeout(function() {
 			$(letterDivs).each(function() {
 				current = $(this);
 
-				var position = $(current).data('original-position');
+				var position = $(current).data('latest-position');
 				$(current).animate({
 					top : position.top,
 					left : position.left
