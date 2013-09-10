@@ -39,12 +39,12 @@ $(document).ready(function() {
 	}
 
 	function getRandomTop() {
-		verticalDirection = Math.floor(Math.random() * 10) + 50;
+		verticalDirection = Math.floor(Math.random() * 10) + 75;
 		return '' + getPlusMinus() + verticalDirection + '%';
 	}
 
 	function getRandomLeft() {
-		horizontalDirection = Math.floor(Math.random() * 10) + 50;
+		horizontalDirection = Math.floor(Math.random() * 10) + 75;
 		return '' + getPlusMinus() + horizontalDirection + '%';
 	}
 

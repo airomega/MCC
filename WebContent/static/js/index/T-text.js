@@ -1,11 +1,11 @@
 $(document).ready(function() {
-	last='#000000';
-	next='#FFFFFF';	
-		
+	last = '#000000';
+	next = '#FFFFFF';
+
 	$('.T-text').click(function() {
 
-		divs = $('div');
-		
+		divs = $('.content .center_block');
+
 		setTimeout(function() {
 			$(divs).each(function() {
 				currentElem = $(this);
@@ -50,7 +50,13 @@ $(document).ready(function() {
 				});
 			});
 		}, 2000);
-		
+
+		setTimeout(function() {
+			$('body').css({
+				'background-color' : next
+			});
+		},2005);
+
 		setTimeout(function() {
 			$('.name-letter').each(function() {
 				currentElem = $(this);
@@ -61,7 +67,7 @@ $(document).ready(function() {
 					'color' : last
 				});
 			});
-		}, 2001);
+		}, 2010);
 
 		if (next === '#FFFFFF') {
 			last = '#FFFFFF';
@@ -70,7 +76,7 @@ $(document).ready(function() {
 			last = '#000000';
 			next = '#FFFFFF';
 		}
-		
+
 		setTimeout(function() {
 			$('.name-letter').each(function() {
 				currentElem = $(this);
@@ -79,8 +85,6 @@ $(document).ready(function() {
 				}, 5000);
 			});
 		}, 6000);
-		
-		
 
 	});
 

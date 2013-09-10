@@ -35,6 +35,9 @@ function setLetterDivNormal() {
 		top : position.top,
 		left : position.left
 	});
+	$(currentElem).css({
+		'background-color' : 'transparent'
+	});
 }
 
 function setTextNormal() {
