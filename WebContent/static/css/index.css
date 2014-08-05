@@ -5,8 +5,9 @@ html,button,input,select,textarea { font-family: sans-serif; }
 .name-letter { float:left;width: 3%; text-align: center; font-size: 22px; font-family: sans-serif; color: #000000;}
 .centre-vid{position:absolute;left:21%; hidden:true;}
 .letter-div { position: absolute;top:35%;width:23px;z-index: 10;}
-.rabbit-div {position:absolute; top:130%;left:46%;background-color : transparent;}
-.sign-div {position:absolute; top:110%;left:40%;background-color : transparent;}
+.rabbit-div {position:absolute; top:130%;left:46%;}
+.sign-div {position:absolute; top:110%;left:40%;}
+.low-text-div{position:absolute; top:60%;left:40%;}
 .lower-div {width:100%; position:absolute; top:100%; left:0}
 .small-image{height:50%;width:50%;z-index: 1;}
 .backgroundVideo{ width:75%,height:75%;z-index: -1;}
@@ -26,3 +27,4 @@ html,button,input,select,textarea { font-family: sans-serif; }
 .U2-letter-div{left:74%;}
 .G-letter-div{left:78%;}
 .H-letter-div{left:82%;}
+.transparent-background{background-color:transparent;}

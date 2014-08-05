@@ -1,33 +1,42 @@
-var clickCount = 0;
-$(document).ready(function() {
+$(document).ready(
+		function() {
 
-	$('.S-text').click(function() {
-		clickCount++;
-		spans = $('.name-letter');
+			$('.S-text').click(
+					function() {
 
-		$(spans).each(function() {
-			currentElem = $(this);
-			changeLetterSize();
+						$(".centre-vid").append(
+								"<video class='backgroundVideo' width='850px' src="
+										+ randomVideo()
+										+ "></video>").hide();
+						
+						
+						
+						$('.backgroundVideo').get(0).play();
+						
+						setTimeout(function() {
+							$('.centre-vid').fadeIn(2000);
+						}, 2000);
+						
+						setTimeout(function() {
+							$('.centre-vid').fadeOut(2000);
+						}, 9000);
+
+						setTimeout(function() {
+							$('.backgroundVideo').remove();
+						}, 11100);
+
+					});
+
+			function randomVideo() {
+				vids = [ 'clover.mp4', 'fishing.mp4', 'insect.mp4',
+						'ruins.mp4', 'wasp.mp4', 'wheat.mp4' ];
+				return '/StevesPlace/static/video/'
+						+ vids[randomInt(vids.length)];
+			}
+
+			function randomInt(base) {
+				var random = Math.floor(Math.random() * base);
+				return random;
+			}
+
 		});
-
-	});
-
-	function changeLetterSize() {
-		selectedFontSize = randomFontSize();
-
-		$(currentElem).animate({
-			'font-size' : selectedFontSize,
-		}, 2000);
-
-	}
-
-	function randomFontSize() {
-		fontSize = [ '12px', '14px', '18px', '22px', '36px', '42px', '54px' ];
-		return fontSize[randomInt(fontSize.length)];
-	}
-
-	function randomInt(base) {
-		return Math.floor(Math.random() * base);
-	}
-
-});

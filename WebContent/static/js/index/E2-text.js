@@ -25,7 +25,7 @@ $(document).ready(function() {
 					left : position.left
 				}, 2500);
 			});
-		}, 7000);
+		}, 5000);
 	});
 
 	function getPlusMinus() {
