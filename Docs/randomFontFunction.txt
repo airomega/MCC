@@ -1,0 +1,30 @@
+$('.E1-text').click(function() {
+
+				spans = $('.name-letter');
+				selectedFontType = randomFontType();
+
+				$(spans).each(function() {
+					currentElem = $(this);
+					changeLetterFont();
+				});
+
+				
+			});
+
+			function changeLetterFont() {
+				$(currentElem).css({
+					'font-family' : selectedFontType
+				});
+
+			}
+
+			function randomFontType() {
+				fontType = [ 'Times New Roman', 'Georgia', 'Serif', 'Calibri',
+						'cursive', 'monospace', 'sans-serif', 'Verdana' ];
+				return fontType[randomInt(fontType.length)];
+			}
+
+			function randomInt(base) {
+				var random = Math.floor(Math.random() * base);
+				return random;
+			}
